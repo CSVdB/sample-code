@@ -1,0 +1,12 @@
+<div .navbar .navbar-light>
+  ^{pageBody navbarPC}
+
+<div .container .page>
+  <div .row>
+    <div .col-md-6 .offset-md-3 .col-xs12>
+      $forall (classes, message) <- messages
+        <article class="message #{classes}">
+          <div .message-header>
+            ^{message}
+
+      ^{widget}

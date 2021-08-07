@@ -1,0 +1,51 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           pact-db
+version:        0.0.0.0
+homepage:       https://github.com/CSVdB/sample-code#readme
+bug-reports:    https://github.com/CSVdB/sample-code/issues
+author:         Nick Van den Broeck
+maintainer:     vandenbroeck@cs-vdb.com
+copyright:      Copyright (c) 2021 Nick Van den Broeck
+license:        AllRightsReserved
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/CSVdB/sample-code
+
+library
+  exposed-modules:
+      Pact.Data
+      Pact.Data.User
+      Pact.DB
+  other-modules:
+      Paths_pact_db
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , either
+    , jose
+    , password
+    , password-instances
+    , persistent
+    , persistent-sqlite
+    , persistent-template
+    , servant
+    , servant-auth
+    , servant-auth-server
+    , servant-client-core
+    , text
+    , uuid
+    , validity
+    , validity-persistent
+    , validity-text
+    , validity-uuid
+    , yamlparse-applicative
+  default-language: Haskell2010

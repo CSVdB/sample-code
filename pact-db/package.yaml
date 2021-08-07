@@ -1,0 +1,33 @@
+name:                pact-db
+version:             0.0.0.0
+github:              "CSVdB/sample-code"
+license:             AllRightsReserved
+author:              "Nick Van den Broeck"
+maintainer:          "vandenbroeck@cs-vdb.com"
+copyright:           "Copyright (c) 2021 Nick Van den Broeck"
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+  dependencies:
+    - aeson
+    - either
+    - jose
+    - password
+    - password-instances
+    - persistent
+    - persistent-sqlite
+    - persistent-template
+    - servant
+    - servant-auth
+    - servant-auth-server
+    - servant-client-core
+    - text
+    - uuid
+    - validity
+    - validity-persistent
+    - validity-text
+    - validity-uuid
+    - yamlparse-applicative

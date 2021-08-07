@@ -1,0 +1,34 @@
+resolver: lts-16.12
+packages:
+- pact-db
+- pact-web-server
+
+extra-deps:
+- github: supki/envparse
+  commit: de5944fb09e9d941fafa35c0f05446af348e7b4d
+- yamlparse-applicative-0.1.0.2@sha256:bda91f2818c1b5b124963931cb7f9a4e5758d026c09713e9ae2234534062747d,2133
+
+- github: NorfairKing/validity
+  commit: 2ef8be2fba631460d770d8cbc7dd67709400fe3d
+  subdirs:
+  - validity-persistent
+
+- github: NorfairKing/safe-coloured-text
+  commit: 7f157485e55528648a95edf3508a122b2e55779e
+  subdirs:
+    - safe-coloured-text
+    - safe-coloured-text-terminfo
+
+- github: NorfairKing/sydtest
+  commit: 4b8c307ac0fd7bbe9a6bf26150f9982f82cf0a89
+  subdirs:
+    - sydtest
+    - sydtest-aeson
+    - sydtest-discover
+    - sydtest-persistent
+    - sydtest-persistent-sqlite
+    - sydtest-wai
+    - sydtest-yesod
+
+nix:
+  shell-file: shell.nix

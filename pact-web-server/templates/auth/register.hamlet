@@ -1,0 +1,43 @@
+<h1 .text-xs-center>Sign Up
+<div .text-xs-center>
+  <a href=@{AuthR LoginR}>
+    Already have an account?
+
+  <form
+    method="post"
+    action=@{AuthR registerR}>
+    <div>
+      <fieldset .form-group>
+        <input .form-control .form-control-lg
+          name="username"
+          placeholder="Username"
+          required=""
+          autofocus="autofocus"
+          type="text">
+
+      <fieldset .form-group>
+        <input .form-control .form-control-lg
+          name="password"
+          placeholder="Password"
+          type="password"
+          required="">
+
+      <fieldset .form-group>
+        <input .form-control .form-control-lg
+          name="confirmPassword"
+          placeholder="Confirm password"
+          type="password"
+          required="">
+
+      ^{token}
+
+      $if not (null messages)
+        <div .field>
+          $forall (_, message) <- messages
+            <p .help .is-danger>
+              #{message}
+
+
+      <input .btn .btn-lg .btn-primary .pull-xs-right
+        type="submit"
+        value="Sign in">
